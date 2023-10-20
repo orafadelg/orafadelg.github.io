@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UrGym - O App dos Marombeiros</title>
+    
+    <!-- Estilo personalizado -->
+    <link rel="stylesheet" href="styles.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             background-color: #f4f4f4;
             margin: 0;
             padding: 0;
@@ -25,12 +28,25 @@
             font-size: 20px;
             color: #666;
             text-align: center;
+            margin-bottom: 30px;
+        }
+        .btn {
+            margin: 5px;
+        }
+        .link {
+            font-size: 14px;
+            color: #888;
         }
     </style>
 </head>
-
 <body>
     <h1>Bem-Vindo ao UrGym</h1>
     <p>O app dos marombeiros</p>
+    <a class="btn waves-effect waves-light blue" href="#!">Criar Conta</a>
+    <a class="btn waves-effect waves-light green" href="#!">Login</a>
+    <p class="link">ou <a href="#!">Continuar sem Login</a></p>
+
+    <!-- JavaScript para inicializar os componentes -->
+    <script src="scripts.js"></script>
 </body>
 </html>
