@@ -1,0 +1,19 @@
+-- Criação da tabela grupos_musculares
+CREATE TABLE grupos_musculares (
+    id_grupo SERIAL PRIMARY KEY,
+    nome_grupo VARCHAR(255) NOT NULL
+);
+
+-- Criação da tabela subgrupos
+CREATE TABLE subgrupos (
+    id_subgrupo SERIAL PRIMARY KEY,
+    nome_subgrupo VARCHAR(255) NOT NULL,
+    id_grupo INTEGER REFERENCES grupos_musculares(id_grupo) ON DELETE CASCADE
+);
+
+-- Criação da tabela exercicios
+CREATE TABLE exercicios (
+    id_exercicio SERIAL PRIMARY KEY,
+    nome_exercicio VARCHAR(255) NOT NULL,
+    id_subgrupo INTEGER REFERENCES subgrupos(id_subgrupo) ON DELETE CASCADE
+);
